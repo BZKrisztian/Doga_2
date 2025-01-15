@@ -1,0 +1,7 @@
+{
+  "category": "string",
+  "description": "string",
+  "id": "integer",
+  "name": "string",
+  "price": "number"
+}

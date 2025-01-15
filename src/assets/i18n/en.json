@@ -1,0 +1,10 @@
+{
+  "TITLE": "Product Management",
+  "ADD_PRODUCT": "Add Product",
+  "UPDATE_PRODUCT": "Update Product",
+  "DELETE_PRODUCT": "Delete Product",
+  "CATEGORY": "Category",
+  "DESCRIPTION": "Description",
+  "NAME": "Name",
+  "PRICE": "Price"
+}

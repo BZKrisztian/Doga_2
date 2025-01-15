@@ -1,0 +1,48 @@
+<!-- <p>product works!</p> -->
+
+<h1>{{ "TITLE" | translate }}</h1>
+
+<form (ngSubmit)="addProduct()">
+  <label for="category">Category</label>
+  <input
+    [(ngModel)]="product.category"
+    name="category"
+    placeholder="{{ 'CATEGORY' | translate }}"
+  />
+
+  <label for="description">Description</label>
+  <input
+    [(ngModel)]="product.description"
+    name="description"
+    placeholder="{{ 'DESCRIPTION' | translate }}"
+  />
+
+  <label for="name">Name</label>
+  <input
+    [(ngModel)]="product.name"
+    name="name"
+    placeholder="{{ 'NAME' | translate }}"
+  />
+
+  <label for="price">Price</label>
+  <input
+    [(ngModel)]="product.price"
+    name="price"
+    placeholder="{{ 'PRICE' | translate }}"
+    type="number"
+  />
+
+  <button type="submit">{{ "ADD_PRODUCT" | translate }}</button>
+</form>
+
+<ul>
+  <li *ngFor="let product of products">
+    {{ product.name }} - {{ product.price }} €
+    <button (click)="updateProduct(product.id)">
+      {{ "UPDATE_PRODUCT" | translate }}
+    </button>
+    <button (click)="deleteProduct(product.id)">
+      {{ "DELETE_PRODUCT" | translate }}
+    </button>
+  </li>
+</ul>
