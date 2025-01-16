@@ -1,0 +1,30 @@
+:host {
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/images/drgBckgr4Prj.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent content from spilling outside */
+    padding: 10px; /* Add some padding for spacing */
+}
+
+.scrollable-list {
+    max-height: 50vh; /* Adjust to fit within the desired area */
+    overflow-y: auto; /* Enables vertical scrolling */
+    background: rgba(255, 255, 255, 0.8); /* Optional: Adds a semi-transparent background for contrast */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    padding: 10px;
+    width: 80%; /* Adjust width as needed */
+    margin: auto; /* Centers the list */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+}
+
+
+.langButton{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}

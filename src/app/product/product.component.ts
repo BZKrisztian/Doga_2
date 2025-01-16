@@ -8,16 +8,21 @@ import { ProductsService } from '../products.service';
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
+
+
 export class ProductComponent implements OnInit {
   products: any[] = [];
   product = {
     category: '',
     description: '',
     name: '',
-    price: 0,
+    price: null,
   };
 
   constructor(private apiUrl: ProductsService){  }
+
+
+
 
   ngOnInit(): void {
       this.loadProducts();

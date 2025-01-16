@@ -1,48 +1,53 @@
 <!-- <p>product works!</p> -->
 
-<h1>{{ "TITLE" | translate }}</h1>
+<h1 class="text-center header4ProductPage">{{ "TITLE" | translate }}</h1>
 
-<form (ngSubmit)="addProduct()">
-  <label for="category">Category</label>
-  <input
-    [(ngModel)]="product.category"
-    name="category"
-    placeholder="{{ 'CATEGORY' | translate }}"
-  />
+<form class="text-center" (ngSubmit)="addProduct()">
+  <div class="mb-3 text-center">
+    <input
+      class="m-1"
+      [(ngModel)]="product.category"
+      name="category"
+      placeholder="{{ 'CATEGORY' | translate }}"
+    />
 
-  <label for="description">Description</label>
-  <input
-    [(ngModel)]="product.description"
-    name="description"
-    placeholder="{{ 'DESCRIPTION' | translate }}"
-  />
+    <input
+      class="m-1"
+      [(ngModel)]="product.description"
+      name="description"
+      placeholder="{{ 'DESCRIPTION' | translate }}"
+    />
 
-  <label for="name">Name</label>
-  <input
-    [(ngModel)]="product.name"
-    name="name"
-    placeholder="{{ 'NAME' | translate }}"
-  />
+    <input
+      class="m-1"
+      [(ngModel)]="product.name"
+      name="name"
+      placeholder="{{ 'NAME' | translate }}"
+    />
 
-  <label for="price">Price</label>
-  <input
-    [(ngModel)]="product.price"
-    name="price"
-    placeholder="{{ 'PRICE' | translate }}"
-    type="number"
-  />
+    <input
+      class="m-1"
+      [(ngModel)]="product.price"
+      name="price"
+      placeholder="{{ 'PRICE' | translate }}"
+      type="number"
+    />
 
-  <button type="submit">{{ "ADD_PRODUCT" | translate }}</button>
+    <button type="submit" class="btn btn-success Button4Ops">{{ "ADD_PRODUCT" | translate }}</button>
+  </div>
 </form>
 
-<ul>
-  <li *ngFor="let product of products">
-    {{ product.name }} - {{ product.price }} €
-    <button (click)="updateProduct(product.id)">
-      {{ "UPDATE_PRODUCT" | translate }}
-    </button>
-    <button (click)="deleteProduct(product.id)">
-      {{ "DELETE_PRODUCT" | translate }}
-    </button>
+<ul class="centerList">
+  <li *ngFor="let product of products" id="productList4Css">
+    <div>{{ product.name }} - {{ product.price }} €</div>
+
+    <div>
+      <button (click)="updateProduct(product.id)" class="btn btn-primary Button4Ops">
+        {{ "UPDATE_PRODUCT" | translate }}
+      </button>
+      <button (click)="deleteProduct(product.id)" class="btn btn-danger Button4Ops">
+        {{ "DELETE_PRODUCT" | translate }}
+      </button>
+    </div>
   </li>
 </ul>

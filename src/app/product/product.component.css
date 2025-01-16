@@ -1,0 +1,47 @@
+:host{
+    justify-content: center;
+    align-items: center;
+}
+
+.header4ProductPage{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding-bottom: 5px;
+}
+
+
+.mb-3{
+    display: flex;
+}
+
+.centerList{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+
+    max-height: 60vh;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+
+}
+
+#productList4Css{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width:40%;
+}
+
+.Button4Ops{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+
