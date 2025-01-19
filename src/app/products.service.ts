@@ -20,11 +20,11 @@ export class ProductsService {
     }
 
     updateProduct(id:string,product:any): Observable<any>{
-      return this.http.put(this.apiUrl+"/"+id, product)
+      return this.http.put(this.apiUrl+`/${id}.json`,product)
     }
 
-    deleteProduct(id:String): Observable<any>{
-      return this.http.delete(this.apiUrl+"/"+id)
+    deleteProduct(id:string): Observable<any>{
+      return this.http.delete(this.apiUrl+`/${id}.json`)
     }
 
 }
